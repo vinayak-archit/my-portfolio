@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Web App',
+      title: 'vinayak_portfolio',
       theme: ThemeColor().themeData,
       home: Home(),
       initialBinding: HomeBinding(),
