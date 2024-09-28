@@ -4,7 +4,7 @@ import 'ColorConstants.dart';
 
 class GradientText extends StatelessWidget {
   const GradientText(
-    this.text, {
+    this.text, {super.key, 
     this.style, required LinearGradient gradient,
   });
 

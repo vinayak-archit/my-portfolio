@@ -17,9 +17,9 @@ class HomeController extends GetxController
   bool hoverLinked = false;
 
   final List<Tab> myTabs = <Tab>[
-    Tab(text: 'Education'),
-    Tab(text: 'Professional Skills'),
-    Tab(text: 'Experience'),
+    const Tab(text: 'Education'),
+    const Tab(text: 'Professional Skills'),
+    const Tab(text: 'Experience'),
   ];
   late TabController tabController;
   int activeIndex = 0;

@@ -1,7 +1,5 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import '../Resources/AssetsConstants.dart';
 import 'ColorConstants.dart';
 import 'TextStyleConstants.dart';
 
@@ -69,15 +67,15 @@ class AppTextField extends StatefulWidget {
 }
 
 class _CustomTextFieldState extends State<AppTextField> {
-  FocusNode myFocusNode = new FocusNode();
+  FocusNode myFocusNode = FocusNode();
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(left: 20, right: 20),
+      margin: const EdgeInsets.only(left: 20, right: 20),
       height: widget.height,
       child: Theme(
-        data: new ThemeData(
+        data: ThemeData(
           primaryColor: THEME_COLOR,
           disabledColor: THEME_COLOR,
           primaryColorDark: THEME_COLOR,
@@ -95,7 +93,7 @@ class _CustomTextFieldState extends State<AppTextField> {
               LengthLimitingTextInputFormatter(widget.maxLength),
             ],
             controller: widget.controller,
-            style: TextStyle(color: APP_TEXT_COLOR, fontSize: 18),
+            style: const TextStyle(color: APP_TEXT_COLOR, fontSize: 18),
             onSubmitted: widget.onSubmitted,
             decoration: InputDecoration(
               errorText: widget.errorText,
@@ -103,23 +101,23 @@ class _CustomTextFieldState extends State<AppTextField> {
                   .copyWith(color: RED_COLOR, fontSize: 12),
               errorMaxLines: 3,
 
-              focusedErrorBorder: OutlineInputBorder(
+              focusedErrorBorder: const OutlineInputBorder(
                 borderRadius: BorderRadius.all(Radius.circular(10.0)),
                 borderSide: BorderSide(color: RED_COLOR, width: 2),
               ),
-              errorBorder: OutlineInputBorder(
+              errorBorder: const OutlineInputBorder(
                 borderRadius: BorderRadius.all(Radius.circular(10.0)),
                 borderSide: BorderSide(color: RED_COLOR, width: 2),
               ),
-              enabledBorder: OutlineInputBorder(
+              enabledBorder: const OutlineInputBorder(
                 borderRadius: BorderRadius.all(Radius.circular(10.0)),
                 borderSide: BorderSide(color: TEXTFIELD_BORDER_COLOR, width: 2),
               ),
-              focusedBorder: OutlineInputBorder(
+              focusedBorder: const OutlineInputBorder(
                 borderRadius: BorderRadius.all(Radius.circular(10.0)),
                 borderSide: BorderSide(color: THEME_COLOR, width: 2),
               ),
-              disabledBorder: OutlineInputBorder(
+              disabledBorder: const OutlineInputBorder(
                 borderRadius: BorderRadius.all(Radius.circular(10.0)),
                 borderSide: BorderSide(color: TEXTFIELD_BORDER_COLOR, width: 2),
               ),
@@ -129,7 +127,7 @@ class _CustomTextFieldState extends State<AppTextField> {
                   ? widget.suffixIconWidget
                   : widget.isShowPassword == true
                       ? IconButton(
-                          icon: Icon(Icons.abc),
+                          icon: const Icon(Icons.abc),
                           // Image.asset(
                           //     _secureText != true
                           //         ? AssetsConstants.mobile_Icon
@@ -153,7 +151,7 @@ class _CustomTextFieldState extends State<AppTextField> {
               labelText: widget.labelText,
               focusColor: THEME_COLOR,
 
-              contentPadding: EdgeInsets.only(left: 25.0, top: 20),
+              contentPadding: const EdgeInsets.only(left: 25.0, top: 20),
               //  labelStyle: TextStyle( color: myFocusNode.hasFocus ? Colors.grey
               // : Colors.blue ,),
               labelStyle: TextStyleConstants.textFormFieldGILROYMedium.copyWith(
@@ -168,7 +166,7 @@ class _CustomTextFieldState extends State<AppTextField> {
               //  prefixIcon: Image.asset(widget.prefixIcon==null?:widget.prefixIcon),
               suffixStyle: TextStyleConstants.textFormFieldGILROYMedium
                   .copyWith(color: APP_TEXT_COLOR, fontSize: 17),
-              prefixStyle: TextStyle(color: APP_TEXT_COLOR, fontSize: 20),
+              prefixStyle: const TextStyle(color: APP_TEXT_COLOR, fontSize: 20),
             ),
             keyboardType: widget.keyBoardType,
             obscureText: widget.isShowPassword == false

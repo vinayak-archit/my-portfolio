@@ -1,15 +1,13 @@
 import 'package:dropdown_button2/dropdown_button2.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../Resources/ColorConstants.dart';
-import 'AssetsConstants.dart';
 import 'TextFontConstants.dart';
 import 'TextStyleConstants.dart';
 
 class CommonDropDownFour extends StatefulWidget {
   String? hintText;
-  final ValueChanged<dynamic?>? onChanged;
+  final ValueChanged<dynamic>? onChanged;
   List<dynamic>? surveyFormData;
   String? chosenValue;
 
@@ -45,10 +43,10 @@ class _CommonDropDownFourState extends State<CommonDropDownFour> {
             child: DropdownButton<dynamic>(
               value: widget.chosenValue,
               elevation: 11,
-              underline: SizedBox(),
+              underline: const SizedBox(),
               isExpanded: true,
               alignment: Alignment.bottomLeft,
-              borderRadius: BorderRadius.all(Radius.circular(8.0)),
+              borderRadius: const BorderRadius.all(Radius.circular(8.0)),
               dropdownColor: WHITE_COLOR,
               onChanged: widget.onChanged,
               items: widget.surveyFormData
@@ -61,7 +59,7 @@ class _CommonDropDownFourState extends State<CommonDropDownFour> {
                                 ? Image.network(e.iconImages.toString(),
                                     height: 25, width: 25)
                                 : Container(),
-                            SizedBox(width: 10),
+                            const SizedBox(width: 10),
                             AppRegularFont(
                                 msg: e.name,
                                 fontSize: 16,
@@ -88,8 +86,8 @@ class NormalDropDownFour extends StatefulWidget {
   TextEditingController? controller;
   double? height;
   String? hintText;
-  final ValueChanged<dynamic?>? onChanged;
-  final ValueChanged<dynamic?>? onSaved;
+  final ValueChanged<dynamic>? onChanged;
+  final ValueChanged<dynamic>? onSaved;
   List<dynamic>? surveyFormData;
   String? chosenValue;
   String? errorText;

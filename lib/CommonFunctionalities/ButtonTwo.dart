@@ -3,18 +3,17 @@ import 'package:flutter/material.dart';
 
 import '../Resources/ColorConstants.dart';
 import '../Resources/ScreenHeightWidth.dart';
-import '../Resources/StringConstants.dart';
 import '../Resources/TextFontConstants.dart';
 
-Widget AppCommonButtonTwo(BuildContext context, String title, double _width,
-    double _height, Color textColor, double fontSize, 
+Widget AppCommonButtonTwo(BuildContext context, String title, double width,
+    double height, Color textColor, double fontSize, 
     // double circular,
     // bool isSelected,
     {VoidCallback? onTap}) {
   return Container(
-    height: _height,
+    height: height,
     alignment: Alignment.center,
-    width: _width,
+    width: width,
     decoration: const BoxDecoration(
       color:Color.fromRGBO(3, 113, 113, 1),
       // gradient: LinearGradient(

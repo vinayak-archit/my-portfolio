@@ -1,8 +1,6 @@
-import 'dart:ui';
 
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'package:flutter_application_1/Resources/AssetsConstants.dart';
 import 'package:flutter_application_1/responsive_design.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -10,7 +8,6 @@ import 'package:get/get.dart';
 import 'package:percent_indicator/linear_percent_indicator.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
-import '../CommonFunctionalities copy/CommonWidget.dart';
 import '../Resources/ColorConstants.dart';
 import '../Resources/ScreenHeightWidth.dart';
 import '../Resources/StringConstants.dart';
@@ -18,7 +15,7 @@ import '../Resources/TextStyleConstants.dart';
 import 'home_controller.dart';
 
 class Home extends StatelessWidget {
-  Home({Key? key}) : super(key: key);
+  const Home({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -68,7 +65,7 @@ class Home extends StatelessWidget {
                               onTap: () {
                                 controller.newcontroller.animateTo(
                                   0,
-                                  duration: Duration(seconds: 1),
+                                  duration: const Duration(seconds: 1),
                                   curve: Curves.fastOutSlowIn,
                                 );
                               },
@@ -86,7 +83,7 @@ class Home extends StatelessWidget {
                                   ResponsiveWidget.isDesktop(context)
                                       ? height
                                       : height,
-                                  duration: Duration(seconds: 1),
+                                  duration: const Duration(seconds: 1),
                                   curve: Curves.fastOutSlowIn,
                                 );
                               },
@@ -104,7 +101,7 @@ class Home extends StatelessWidget {
                                   ResponsiveWidget.isDesktop(context)
                                       ? height * 2
                                       : height * 2,
-                                  duration: Duration(seconds: 1),
+                                  duration: const Duration(seconds: 1),
                                   curve: Curves.fastOutSlowIn,
                                 );
                               },
@@ -122,7 +119,7 @@ class Home extends StatelessWidget {
                                   ResponsiveWidget.isDesktop(context)
                                       ? height * 2.5
                                       : height * 2.3,
-                                  duration: Duration(seconds: 1),
+                                  duration: const Duration(seconds: 1),
                                   curve: Curves.fastOutSlowIn,
                                 );
                               },
@@ -216,7 +213,7 @@ class Home extends StatelessWidget {
                                                               ? 0
                                                               : 0,
                                                   duration:
-                                                      Duration(seconds: 1),
+                                                      const Duration(seconds: 1),
                                                   curve: Curves.fastOutSlowIn,
                                                 );
                                               },
@@ -244,7 +241,7 @@ class Home extends StatelessWidget {
                                                               ? height * 1.7
                                                               : height,
                                                   duration:
-                                                      Duration(seconds: 1),
+                                                      const Duration(seconds: 1),
                                                   curve: Curves.fastOutSlowIn,
                                                 );
                                               },
@@ -272,7 +269,7 @@ class Home extends StatelessWidget {
                                                               ? height * 2.9
                                                               : height,
                                                   duration:
-                                                      Duration(seconds: 1),
+                                                      const Duration(seconds: 1),
                                                   curve: Curves.fastOutSlowIn,
                                                 );
                                               },
@@ -300,7 +297,7 @@ class Home extends StatelessWidget {
                                                               ? height * 3.2
                                                               : height,
                                                   duration:
-                                                      Duration(seconds: 1),
+                                                      const Duration(seconds: 1),
                                                   curve: Curves.fastOutSlowIn,
                                                 );
                                               },
@@ -334,7 +331,7 @@ class Home extends StatelessWidget {
           height: height,
           width: width,
           child: ListView(controller: controller.newcontroller, children: [
-            Container(
+            SizedBox(
               width: width,
               child: ResponsiveWidget.isDesktop(context) ||
                       ResponsiveWidget.isTablet(context)
@@ -861,7 +858,7 @@ class Home extends StatelessWidget {
                   indent: 20,
                   endIndent: 20,
                 )),
-            Container(
+            SizedBox(
               // height: height,
               width: width,
               child: Column(
@@ -912,7 +909,7 @@ class Home extends StatelessWidget {
                             //                   ? width * 0.01
                             //                   : width * 0.3,
                             // ),
-                            labelPadding: EdgeInsets.all(0),
+                            labelPadding: const EdgeInsets.all(0),
                             indicatorColor: Colors.transparent,
                             controller: controller.tabController,
                             tabs: controller.myTabs
@@ -971,12 +968,12 @@ class Home extends StatelessWidget {
                               controller.update();
                             },
                           ),
-                          Container(
+                          SizedBox(
                             width: width,
                             height: height * 0.78,
                             child: TabBarView(
                               controller: controller.tabController,
-                              physics: NeverScrollableScrollPhysics(),
+                              physics: const NeverScrollableScrollPhysics(),
                               children: [
                                 education(context),
                                 skills(context),
@@ -1068,7 +1065,7 @@ class Home extends StatelessWidget {
                                 title: Row(
                                   mainAxisAlignment: MainAxisAlignment.start,
                                   children: [
-                                    Container(
+                                    SizedBox(
                                         width: width * 0.19,
                                         child: ClipOval(
                                             child: Image.asset(
@@ -1088,7 +1085,7 @@ class Home extends StatelessWidget {
                                         style: TextStyleConstants
                                             .textStyleWhitecolor14w500,
                                       ),
-                                      Text(""),
+                                      const Text(""),
                                       Text(
                                         "Budget is crucial, and Medimytra lets you compare consultation fees for doctors across platforms. Whether you prefer an economical option or are willing to invest in premium healthcare, the app's price comparison feature has got you covered.\n\n The app compiles genuine patient reviews and ratings from various sources, giving you valuable insights into the quality of care provided by each doctor. You can read about other patients' experiences to gauge their satisfaction level and make a confident decision.\n\nMedimytra understands the importance of a doctor's experience and credentials. It provides detailed information about each doctor's qualifications, years of practice, and specialization, ensuring you find a professional that aligns perfectly with your medical requirements.",
                                         style: TextStyleConstants
@@ -1128,7 +1125,7 @@ class Home extends StatelessWidget {
                                 collapsedIconColor: WHITE_COLOR,
                                 iconColor: WHITE_COLOR,
                                 title: Row(children: [
-                                  Container(
+                                  SizedBox(
                                       width: width * 0.04,
                                       child: ClipOval(
                                           child: Image.asset(
@@ -1191,7 +1188,7 @@ class Home extends StatelessWidget {
                                         style: TextStyleConstants
                                             .textStyleWhitecolor14w500,
                                       ),
-                                      Text(""),
+                                      const Text(""),
                                       Text(
                                         "The CRM Tracker app is a powerful tool built with Flutter framework and Dart programming language, offering seamless functionality on both Android and iOS devices. It serves as an efficient customer relationship management solution specifically tailored for businesses with field sales teams.\n\nOne of the key features of the app is its ability to track the real-time location of field sales workers, even when the app is not actively running. Through intelligent background services, the app automatically updates the worker's location every 15 minutes, ensuring accurate tracking and enabling businesses to monitor their sales team's movements efficiently.\n\nThe app provides a user-friendly interface for employees to log their activities and tasks throughout the day. Sales representatives can easily fill in their activity logs, including customer visits, meetings, and sales updates, all within the app. This streamlines the reporting process, eliminating the need for manual paperwork and ensuring accurate and timely data entry.\n\nTo promote effective team collaboration and supervision, the app allows supervisors and senior employees to access and review the activity logs of their juniors. This feature enables managers to monitor the progress of their team members, identify potential challenges, and provide necessary guidance or support as required.\n\nThe CRM Tracker app leverages the advanced capabilities of Flutter framework, providing a native-like experience on both Android and iOS platforms. It offers smooth performance, intuitive navigation, and a consistent user interface across devices, ensuring a seamless and enjoyable user experience for all users.\n\nTo enhance data security and privacy, the app employs encryption protocols to protect sensitive information, ensuring that customer and sales data remains confidential and secure at all times. Additionally, the app allows users to set access permissions, ensuring that only authorized personnel can view and edit specific logs and data.\n\nWith its cross-platform capabilities and robust functionality, the CRM Tracker app provides businesses with a comprehensive solution for effectively managing their field sales teams. It simplifies the tracking and reporting processes, promotes collaboration and supervision, and ultimately enhances overall productivity and efficiency.\n\nWhether it's tracking sales personnel locations, facilitating activity logging, or enabling seamless team communication, the CRM Tracker app built with Flutter and Dart proves to be an invaluable tool for businesses aiming to optimize their sales operations and drive success in the competitive marketplace.",
                                         style: TextStyleConstants
@@ -1231,7 +1228,7 @@ class Home extends StatelessWidget {
                                 collapsedIconColor: WHITE_COLOR,
                                 iconColor: WHITE_COLOR,
                                 title: Row(children: [
-                                  Container(
+                                  SizedBox(
                                       width: width * 0.05,
                                       child:
                                           Image.asset(AssetsConstants.smlogo)),
@@ -1295,37 +1292,37 @@ class Home extends StatelessWidget {
                                         style: TextStyleConstants
                                             .textStyleWhitecolor14w500,
                                       ),
-                                      Text(""),
+                                      const Text(""),
                                       Text(
                                         "For patients, the app offers a user-friendly interface where they can create an account, search for doctors based on their specialization, and book appointments for virtual consultations. The app provides a comprehensive list of doctors with their profiles, including their qualifications, areas of expertise, and available time slots.",
                                         style: TextStyleConstants
                                             .textStyleWhitecolor14w500,
                                       ),
-                                      Text(""),
+                                      const Text(""),
                                       Text(
                                         "Patients can schedule appointments at their preferred time and date, ensuring flexibility and convenience. The app also offers the option for patients to book face-to-face consultations if they prefer an in-person visit. The booking process is straightforward, allowing patients to select the doctor, choose a suitable time slot, and confirm the appointment with just a few taps.",
                                         style: TextStyleConstants
                                             .textStyleWhitecolor14w500,
                                       ),
-                                      Text(""),
+                                      const Text(""),
                                       Text(
                                         "One of the standout features of the app is the built-in video calling functionality. When the scheduled consultation time arrives, patients can connect with their doctor through a secure and reliable video call. This enables a real-time interaction where patients can discuss their symptoms, receive medical advice, and ask questions directly to the doctor.",
                                         style: TextStyleConstants
                                             .textStyleWhitecolor14w500,
                                       ),
-                                      Text(""),
+                                      const Text(""),
                                       Text(
                                         "For doctors, the app provides an efficient platform to manage appointments and connect with patients. They can review patient profiles, access their medical history, and conduct consultations through video calls. The app also offers features for doctors to update their availability, manage their schedules, and send reminders to patients.",
                                         style: TextStyleConstants
                                             .textStyleWhitecolor14w500,
                                       ),
-                                      Text(""),
+                                      const Text(""),
                                       Text(
                                         "With this Online Consultation app, patients can receive medical advice from the comfort of their homes, avoiding the need to travel and wait in crowded clinics. Doctors can provide consultations remotely, ensuring access to healthcare services for patients regardless of their location.",
                                         style: TextStyleConstants
                                             .textStyleWhitecolor14w500,
                                       ),
-                                      Text(""),
+                                      const Text(""),
                                       Text(
                                         "Overall, this Android app developed with Android Studio and Kotlin offers a seamless and secure platform for doctors and patients to connect for online consultations. It leverages the power of technology to enhance the accessibility and convenience of healthcare services, ultimately improving the patient experience and promoting efficient healthcare delivery.",
                                         style: TextStyleConstants
@@ -1365,7 +1362,7 @@ class Home extends StatelessWidget {
                                 collapsedIconColor: WHITE_COLOR,
                                 iconColor: WHITE_COLOR,
                                 title: Row(children: [
-                                  Container(
+                                  SizedBox(
                                       width: width * 0.7,
                                       child: Image.asset(AssetsConstants.cnd)),
                                   // Column(
@@ -1728,7 +1725,7 @@ class Home extends StatelessWidget {
                               ],
                             ),
                           ),
-                          Container(
+                          SizedBox(
                             width: width / 5,
                             child: Image.asset("assets/images/myimg.png"),
                           )
@@ -2011,7 +2008,7 @@ class Home extends StatelessWidget {
                       ),
                       animation: true,
                       animationDuration: 500,
-                      barRadius: Radius.circular(10.0),
+                      barRadius: const Radius.circular(10.0),
                     ),
                   ),
                 ],
@@ -2070,7 +2067,7 @@ class Home extends StatelessWidget {
                       ),
                       animation: true,
                       animationDuration: 500,
-                      barRadius: Radius.circular(10.0),
+                      barRadius: const Radius.circular(10.0),
                     ),
                   ),
                 ],
@@ -2129,7 +2126,7 @@ class Home extends StatelessWidget {
                       ),
                       animation: true,
                       animationDuration: 500,
-                      barRadius: Radius.circular(10.0),
+                      barRadius: const Radius.circular(10.0),
                     ),
                   ),
                 ],
@@ -2188,7 +2185,7 @@ class Home extends StatelessWidget {
                       ),
                       animation: true,
                       animationDuration: 500,
-                      barRadius: Radius.circular(10.0),
+                      barRadius: const Radius.circular(10.0),
                     ),
                   ),
                 ],
@@ -2247,7 +2244,7 @@ class Home extends StatelessWidget {
                       ),
                       animation: true,
                       animationDuration: 500,
-                      barRadius: Radius.circular(10.0),
+                      barRadius: const Radius.circular(10.0),
                     ),
                   ),
                 ],
@@ -2306,7 +2303,7 @@ class Home extends StatelessWidget {
                       ),
                       animation: true,
                       animationDuration: 500,
-                      barRadius: Radius.circular(10.0),
+                      barRadius: const Radius.circular(10.0),
                     ),
                   ),
                   Container(
@@ -2365,7 +2362,7 @@ class Home extends StatelessWidget {
                             ),
                             animation: true,
                             animationDuration: 500,
-                            barRadius: Radius.circular(10.0),
+                            barRadius: const Radius.circular(10.0),
                           ),
                         ),
                       ],
@@ -2427,7 +2424,7 @@ class Home extends StatelessWidget {
                             ),
                             animation: true,
                             animationDuration: 500,
-                            barRadius: Radius.circular(10.0),
+                            barRadius: const Radius.circular(10.0),
                           ),
                         ),
                       ],
@@ -2446,7 +2443,7 @@ class Home extends StatelessWidget {
     ScreenSize().init(context);
     var height = ScreenSize.screenHeight;
     var width = ScreenSize.screenWidth;
-    return Container(
+    return SizedBox(
       width: width,
       // height: height,
       child: SingleChildScrollView(

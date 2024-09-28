@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 class ThemeColor {
   static const Color white = Color(0xffffffff);
   static const Color secondaryGrey = Color(0xffF1F3F4);
-  static const Color secondaryMediumGrey = Color(0xff0000004D);
+  static const Color secondaryMediumGrey = Color(0xff0000004d);
   static const Color primaryBlack = Color(0xff141915);
   static const Color secondaryDarkGrey = Color(0xff606260);
   static const Color primaryDarkGrey = Color(0xff414141);
@@ -19,14 +19,12 @@ class ThemeColor {
   static const Color gradient1 = Color(0xFF2E2739
 );
   static const Color gradient2 = Color(0xFF49BEE8);
-  static Color tabsBackground = Color(0xff239DD1);
+  static Color tabsBackground = const Color(0xff239DD1);
 
   ThemeData get themeData {
-    ColorScheme colorSchemeMovieApp = ColorScheme(
+    ColorScheme colorSchemeMovieApp = const ColorScheme(
       // primary green
       primary: Color(0xff2E2739),
-      // primary blue
-      primaryVariant: Color(0xff239DD1),
       // gradient 1
       surface: Color(0xff2E2739),
       // gradient 2
@@ -34,8 +32,6 @@ class ThemeColor {
       // secondary grey
       //secondary: Color(0xffF1F3F4),
       secondary: Color(0xff2E2739),
-      // secondary dark grey
-      secondaryVariant: Color(0xff606260),
       // secondary red
       error: Color(0xffE2173A),
       // primary green

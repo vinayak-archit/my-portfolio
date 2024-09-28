@@ -10,7 +10,7 @@ class RouteTransition extends PageRouteBuilder {
           Animation<double> secondaryAnimation) {
         return widget!;
       },
-      transitionDuration: Duration(milliseconds: 500),
+      transitionDuration: const Duration(milliseconds: 500),
       transitionsBuilder: (BuildContext context,
           Animation<double> animation,
           Animation<double> secondaryAnimation,

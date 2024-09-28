@@ -1,12 +1,7 @@
-import 'dart:html';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/Resources/StringConstants.dart';
 import 'package:flutter_application_1/Resources/TextStyleConstants.dart';
-import 'package:flutter_application_1/Screens/home.dart';
-import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
-import '../Resources/AssetsConstants.dart';
 import '../Resources/ColorConstants.dart';
 import '../Resources/ScreenHeightWidth.dart';
 import '../responsive_design.dart';
@@ -123,7 +118,7 @@ Widget Header(BuildContext context) {
               onTap: () {},
               child: Row(
                 children: [
-                  Icon(
+                  const Icon(
                     Icons.person,
                     color: WHITE_COLOR,
                   ),

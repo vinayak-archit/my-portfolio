@@ -1,6 +1,5 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'dart:ui';
 
 import 'TextStyleConstants.dart';
 
@@ -12,7 +11,7 @@ TextSpan AppBoldTextSpan(
       VoidCallback? onPressed,
       String? msg}) {
   return TextSpan(
-      recognizer: new TapGestureRecognizer()..onTap = onPressed,
+      recognizer: TapGestureRecognizer()..onTap = onPressed,
       text: text1,
       style: TextStyleConstants.textFormFieldGILROYBold
           .copyWith(color: color, fontSize: fontSize));
@@ -40,7 +39,7 @@ TextSpan AppRegularTextSpan(
       Color? color,
       VoidCallback? onPressed}) {
   return TextSpan(
-      recognizer: new TapGestureRecognizer()..onTap = onPressed,
+      recognizer: TapGestureRecognizer()..onTap = onPressed,
       text: text1,
       style: TextStyleConstants.textFormFieldGILROYRegular
           .copyWith(color: color, fontSize: fontSize));
@@ -52,7 +51,7 @@ TextSpan AppSemiBoldTextSpan(
       Color? color,
       VoidCallback? onPressed}) {
   return TextSpan(
-      recognizer: new TapGestureRecognizer()..onTap = onPressed,
+      recognizer: TapGestureRecognizer()..onTap = onPressed,
       text: text1,
       style: TextStyleConstants.textFormFieldGILROYRegular
           .copyWith(color: color, fontSize: fontSize));

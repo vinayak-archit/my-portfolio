@@ -1,5 +1,4 @@
 import "package:flutter/material.dart";
-import 'package:flutter_application_1/Resources/CreateHexColors.dart';
 
 // ADD COLOR HERE
 // const THEME_COLOR = Color(0Xff0099ff);
@@ -27,7 +26,7 @@ const OTP_PIN_BOUNDARY_COLOR = Color(0xffD9D9D9);
 const BUTTON_TEXT_COLOR = Color(0xff8f8f8f);
 const LEFT_GRADIENT_COLOR = Color.fromRGBO(25, 136, 197, 1);
 const RIGHT_GRADIENT_COLOR = Color.fromRGBO(0, 83, 154, 1);
-final GRADIENT_COLOR = LinearGradient(colors: [
+const GRADIENT_COLOR = LinearGradient(colors: [
   LEFT_GRADIENT_COLOR,
   RIGHT_GRADIENT_COLOR,
 ]);
@@ -41,7 +40,7 @@ final GRADIENT_COLOR = LinearGradient(colors: [
 //                           end: Alignment.topRight,
 //                           stops: [0, 0, 0.6],
 //                         );
-final GRADIENT_COLOR_TWO = LinearGradient(
+const GRADIENT_COLOR_TWO = LinearGradient(
   colors: [
     Color.fromRGBO(25, 136, 197, 1),
     Color.fromRGBO(0, 83, 154, 1),
@@ -52,6 +51,6 @@ final GRADIENT_COLOR_TWO = LinearGradient(
   stops: [0, 0, 0.6],
 );
 
-final TAB_COLOR = const Color.fromRGBO(232, 241, 242, 1);
+const TAB_COLOR = Color.fromRGBO(232, 241, 242, 1);
 
-final DASHBOARD_COLOR = const Color.fromRGBO(194, 221, 224, 1);
+const DASHBOARD_COLOR = Color.fromRGBO(194, 221, 224, 1);

@@ -1,3 +1,4 @@
+
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/Screens/home.dart';
 import 'package:flutter_application_1/Screens/home_binding.dart';
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'vinayak_portfolio',
       theme: ThemeColor().themeData,
-      home: Home(),
+      home: const Home(),
       initialBinding: HomeBinding(),
       getPages: AppPages.pages,
     );

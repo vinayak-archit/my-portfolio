@@ -116,7 +116,7 @@ class AppValidation {
 
   final validatePrice =
       StreamTransformer<String, String>.fromHandlers(handleData: (value, sink) {
-    if (value.length > 0) {
+    if (value.isNotEmpty) {
       isRupees(value)
           ? sink.add(value)
           : sink.addError('Please fill the price');
@@ -143,21 +143,21 @@ class AppValidation {
 
   final validateEntry =
       StreamTransformer<String, String>.fromHandlers(handleData: (value, sink) {
-    if (value.length > 0) {
+    if (value.isNotEmpty) {
       value.length > 5 ? sink.add(value) : sink.addError("Too Short");
     }
   });
 
   final validateMendatoryField =
       StreamTransformer<String, String>.fromHandlers(handleData: (value, sink) {
-    value.length > 0
+    value.isNotEmpty
         ? sink.add(value)
         : sink.addError("This field is mandatory");
   });
 
   final validateMendatoryField1 =
       StreamTransformer<String, String>.fromHandlers(handleData: (value, sink) {
-    value.length > 0
+    value.isNotEmpty
         ? sink.add(value)
         : sink.addError("This field is mandatory");
   });
@@ -170,7 +170,7 @@ class AppValidation {
 
   final validateBusinessName =
       StreamTransformer<String, String>.fromHandlers(handleData: (value, sink) {
-    if (value.length > 0) {
+    if (value.isNotEmpty) {
       isName(value)
           ? value.length >= 0
               ? sink.add(value)
@@ -181,7 +181,7 @@ class AppValidation {
 
   final validateFullName =
       StreamTransformer<String, String>.fromHandlers(handleData: (value, sink) {
-    if (value.length > 0) {
+    if (value.isNotEmpty) {
       isFullName(value)
           ? value.length >= 0
               ? sink.add(value)
@@ -198,7 +198,7 @@ class AppValidation {
 
   final validateLastName =
       StreamTransformer<String, String>.fromHandlers(handleData: (value, sink) {
-    if (value.length > 0) {
+    if (value.isNotEmpty) {
       isFullName(value)
           // ? value.length >= 2
           ? sink.add(value)
@@ -215,8 +215,8 @@ class AppValidation {
 
   static String? validatePinNumber(String value) {
     String pattern = r'(^[0-9]*$)';
-    RegExp regExp = new RegExp(pattern);
-    if (value.length == 0) {
+    RegExp regExp = RegExp(pattern);
+    if (value.isEmpty) {
       return "PIN  is Required";
     } else if (value.length != 4) {
       return "PIN must 4 digits";
@@ -235,7 +235,7 @@ class AppValidation {
 
   final validateEmail =
       StreamTransformer<String, String>.fromHandlers(handleData: (value, sink) {
-    if (value.length != 0) {
+    if (value.isNotEmpty) {
       isEmail(value)
           ? sink.add(value)
           : sink.addError("Please enter a valid email address");
@@ -244,7 +244,7 @@ class AppValidation {
 
   final validateEmailAndPhone =
       StreamTransformer<String, String>.fromHandlers(handleData: (value, sink) {
-    if (value.length != 0) {
+    if (value.isNotEmpty) {
       if (!isEmail(value) && !isPhone(value)) {
         return sink.addError("Please enter a valid email or phone number.");
       } else if (value.length < 10) {
@@ -263,7 +263,7 @@ class AppValidation {
 
   final validatePhoneNo =
       StreamTransformer<String, String>.fromHandlers(handleData: (value, sink) {
-    if (value.length > 0) {
+    if (value.isNotEmpty) {
       isPhone(value)
           ? value.length == 10
               ? sink.add(value)
@@ -280,7 +280,7 @@ class AppValidation {
 
   final validatePassword =
       StreamTransformer<String, String>.fromHandlers(handleData: (value, sink) {
-    if (value.length != 0) {
+    if (value.isNotEmpty) {
       isPassword(value)
           ? sink.add(value)
           : sink.addError(
@@ -290,7 +290,7 @@ class AppValidation {
 
   final validateDropDown =
       StreamTransformer<String, String>.fromHandlers(handleData: (value, sink) {
-    value.length != 0
+    value.isNotEmpty
         ? sink.add(value)
         : sink.addError("Please select the value.");
   });

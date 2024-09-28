@@ -2,7 +2,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-import '../Resources/AssetsConstants.dart';
 import '../Resources/ColorConstants.dart';
 import '../Resources/TextStyleConstants.dart';
 
@@ -18,7 +17,7 @@ class AppCommonTextField extends StatefulWidget {
   bool? isShowCountryCode;
   String? prefixText;
   ValueChanged<String>? onSubmitted;
-  bool? isError = null;
+  bool? isError;
   TextInputType? keyBoardType;
   int? maxLength;
   double? height;
@@ -129,7 +128,7 @@ class _AppCommonTextFieldState extends State<AppCommonTextField> {
                   ? widget.suffixIconWidget
                   : widget.isShowPassword == true
                       ? IconButton(
-                          icon: Icon(Icons.abc),
+                          icon: const Icon(Icons.abc),
                           // Image.asset(
                           //     _secureText != true
                           //         ? AssetsConstants.mobile_Icon
