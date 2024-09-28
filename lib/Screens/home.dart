@@ -1805,7 +1805,7 @@ class Home extends StatelessWidget {
                 children: [
                   Flexible(
                     child: Text(
-                      'Bachelor of Computer Science',
+                      'Bachelor of Computer Application',
                       softWrap: true,
                       // style: TextStyle(color: WHITE_COLOR,fontWeight: FontWeight.bold),
                       style: TextStyle(
