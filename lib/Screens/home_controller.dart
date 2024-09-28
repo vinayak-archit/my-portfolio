@@ -17,12 +17,19 @@ class HomeController extends GetxController
   bool hoverLinked = false;
 
   final List<Tab> myTabs = <Tab>[
-    const Tab(text: 'Education'),
+    const Tab(
+      text: 'Education',
+    ),
     const Tab(text: 'Professional Skills'),
     const Tab(text: 'Experience'),
   ];
   late TabController tabController;
   int activeIndex = 0;
+
+  updateActiveIndex(int index) {
+    activeIndex = index;
+    update();
+  }
 
   HomeController() {
     tabController = TabController(length: myTabs.length, vsync: this);
